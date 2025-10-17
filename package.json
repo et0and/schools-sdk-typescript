@@ -1,12 +1,12 @@
 {
   "name": "schools-sdk",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The official TypeScript library for the Schools API",
   "author": "Schools <info@yufugumi.com>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",
-  "repository": "github:stainless-sdks/schools-typescript",
+  "repository": "github:et0and/schools-sdk-typescript",
   "license": "Apache-2.0",
   "packageManager": "yarn@1.22.22",
   "files": [
