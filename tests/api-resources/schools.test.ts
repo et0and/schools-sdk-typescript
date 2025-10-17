@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Schools from 'schools';
+import Schools from 'schools-sdk';
 
 const client = new Schools({
   apiKey: 'My API Key',

@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "paths": {
-      "schools/*": ["./src/*"],
-      "schools": ["./src/index.ts"]
+      "schools-sdk/*": ["./src/*"],
+      "schools-sdk": ["./src/index.ts"]
     },
     "noEmit": true,
 
