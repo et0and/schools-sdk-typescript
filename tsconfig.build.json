@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "schools/*": ["./dist/src/*"],
-      "schools": ["./dist/src/index.ts"]
+      "schools-sdk/*": ["./dist/src/*"],
+      "schools-sdk": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

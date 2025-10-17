@@ -55,12 +55,12 @@ $ cd schools-typescript
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link schools
+$ yarn link schools-sdk
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global schools
+$ pnpm link -—global schools-sdk
 ```
 
 ## Running tests
