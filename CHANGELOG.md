@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 (2025-11-04)
+
+Full Changelog: [v0.1.1...v0.1.2](https://github.com/et0and/schools-sdk-typescript/compare/v0.1.1...v0.1.2)
+
+### Chores
+
+* update SDK settings ([683f8df](https://github.com/et0and/schools-sdk-typescript/commit/683f8df5588bcc68440b0c0374911c4e5323c94d))
+
 ## 0.1.1 (2025-11-04)
 
 Full Changelog: [v0.1.0...v0.1.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.1.0...v0.1.1)
