@@ -34,7 +34,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'schools_sdk_api',
-      version: '0.1.2',
+      version: '0.2.0',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
