@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.3.0 (2025-11-27)
+
+Full Changelog: [v0.2.0...v0.3.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.2.0...v0.3.0)
+
+### Features
+
+* **mcp:** add detail field to docs search tool ([8058211](https://github.com/et0and/schools-sdk-typescript/commit/80582118f5bf40a8b1c80ae293d409581c47bcc0))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on jq failure ([fad83c9](https://github.com/et0and/schools-sdk-typescript/commit/fad83c9fce3b5291927a303c74e6933e2dab9fe9))
+
+
+### Chores
+
+* **internal:** configure MCP Server hosting ([1666b70](https://github.com/et0and/schools-sdk-typescript/commit/1666b706f67d60486fb3b3cc6fb9312163d7eb42))
+* **mcp:** upgrade jq-web ([8b7448e](https://github.com/et0and/schools-sdk-typescript/commit/8b7448e7555db5217d2157294d440c49915bc6bd))
+
 ## 0.2.0 (2025-11-11)
 
 Full Changelog: [v0.1.2...v0.2.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.1.2...v0.2.0)

@@ -1,6 +1,6 @@
 {
   "name": "schools-sdk-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The official MCP Server for the Schools API",
   "author": "Schools <info@yufugumi.com>",
   "types": "dist/index.d.ts",
