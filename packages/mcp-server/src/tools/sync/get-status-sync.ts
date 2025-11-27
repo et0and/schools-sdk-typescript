@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { maybeFilter } from 'schools-sdk-mcp/filtering';
-import { Metadata, asTextContentResult } from 'schools-sdk-mcp/tools/types';
+import { isJqError, maybeFilter } from 'schools-sdk-mcp/filtering';
+import { Metadata, asErrorResult, asTextContentResult } from 'schools-sdk-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import Schools from 'schools-sdk';
@@ -38,7 +38,14 @@ export const tool: Tool = {
 
 export const handler = async (client: Schools, args: Record<string, unknown> | undefined) => {
   const { jq_filter } = args as any;
-  return asTextContentResult(await maybeFilter(jq_filter, await client.sync.getStatus()));
+  try {
+    return asTextContentResult(await maybeFilter(jq_filter, await client.sync.getStatus()));
+  } catch (error) {
+    if (isJqError(error)) {
+      return asErrorResult(error.message);
+    }
+    throw error;
+  }
 };
 
 export default { metadata, tool, handler };
