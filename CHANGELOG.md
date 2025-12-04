@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.4.0 (2025-12-03)
+
+Full Changelog: [v0.3.0...v0.4.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.3.0...v0.4.0)
+
+### Features
+
+* **mcp:** return logs on code tool errors ([08b6d3f](https://github.com/et0and/schools-sdk-typescript/commit/08b6d3f89eeda8e72e03f0b38fb2952a8ec44cba))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on api error ([4292092](https://github.com/et0and/schools-sdk-typescript/commit/4292092d9a2ecc3eaf6310c78793ae843019a972))
+
+
+### Chores
+
+* **client:** fix logger property type ([0af84f8](https://github.com/et0and/schools-sdk-typescript/commit/0af84f8b5864500ba308a02819bb05bc2b67ac52))
+* **internal:** upgrade eslint ([ac999d4](https://github.com/et0and/schools-sdk-typescript/commit/ac999d48f9b5deba37c472dfa7d72057f28bf505))
+
 ## 0.3.0 (2025-11-27)
 
 Full Changelog: [v0.2.0...v0.3.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.2.0...v0.3.0)
