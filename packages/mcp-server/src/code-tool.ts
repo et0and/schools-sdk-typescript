@@ -39,6 +39,7 @@ export async function codeTool() {
       },
       body: JSON.stringify({
         project_name: 'schools',
+        client_opts: { environment: (readEnv('SCHOOLS_ENVIRONMENT') || undefined) as any },
         code,
       }),
     });
