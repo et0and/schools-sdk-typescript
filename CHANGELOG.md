@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.5.0 (2025-12-11)
+
+Full Changelog: [v0.4.0...v0.5.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.4.0...v0.5.0)
+
+### Features
+
+* **mcp:** add typescript check to code execution tool ([163a4b9](https://github.com/et0and/schools-sdk-typescript/commit/163a4b9443450be09cc6017ec6d87acfc3bb2beb))
+* **mcp:** handle code mode calls in the Stainless API ([c330db7](https://github.com/et0and/schools-sdk-typescript/commit/c330db7642103c295e5131f51f33d2805c7e454c))
+
+
+### Bug Fixes
+
+* **mcp:** add client instantiation options to code tool ([1fb376f](https://github.com/et0and/schools-sdk-typescript/commit/1fb376f345b87fdf530397808562a3accfdf09cc))
+* **mcp:** correct code tool API endpoint ([2f7c6e9](https://github.com/et0and/schools-sdk-typescript/commit/2f7c6e904e1540f9e3ea0867f8d013765305703e))
+* **mcp:** return correct lines on typescript errors ([011b89f](https://github.com/et0and/schools-sdk-typescript/commit/011b89f332e9c99c59c3f82359d5f392fa45b757))
+
+
+### Chores
+
+* **internal:** codegen related update ([39af283](https://github.com/et0and/schools-sdk-typescript/commit/39af283d033a83518185a67d08409349d7f3745d))
+* **internal:** codegen related update ([f9ffa75](https://github.com/et0and/schools-sdk-typescript/commit/f9ffa75af156a50c7686057de3ee832872d6b4bb))
+* **mcp:** update lockfile ([2c8d559](https://github.com/et0and/schools-sdk-typescript/commit/2c8d55914ba0975d2a57b44b6de466d7c13e3311))
+* use latest @modelcontextprotocol/sdk ([7f90ba8](https://github.com/et0and/schools-sdk-typescript/commit/7f90ba84663f3c851a49932e4fc654bbe7c6e80a))
+
 ## 0.4.0 (2025-12-03)
 
 Full Changelog: [v0.3.0...v0.4.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.3.0...v0.4.0)
