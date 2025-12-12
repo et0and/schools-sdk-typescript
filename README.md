@@ -23,7 +23,7 @@ The full API of this library can be found in [api.md](api.md).
 import Schools from 'schools-sdk';
 
 const client = new Schools({
-  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted
+  apiKey: process.env['SCHOOLS_API_KEY'], 
   environment: 'environment_1', // defaults to 'production'
 });
 
@@ -41,7 +41,7 @@ This library includes TypeScript definitions for all request params and response
 import Schools from 'schools-sdk';
 
 const client = new Schools({
-  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted
+  apiKey: process.env['SCHOOLS_API_KEY'],
   environment: 'environment_1', // defaults to 'production'
 });
 
