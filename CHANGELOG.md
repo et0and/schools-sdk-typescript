@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.1 (2025-12-18)
+
+Full Changelog: [v0.5.0...v0.5.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.5.0...v0.5.1)
+
+### Bug Fixes
+
+* **mcp:** pass base url to code tool ([dd25b93](https://github.com/et0and/schools-sdk-typescript/commit/dd25b93170ee520c32abc4361ed6694f7dc42f45))
+
+
+### Chores
+
+* **docs:** key needed for sdk ([a75cede](https://github.com/et0and/schools-sdk-typescript/commit/a75cede50540b14875bac5e178efd7474c2dd074))
+
 ## 0.5.0 (2025-12-11)
 
 Full Changelog: [v0.4.0...v0.5.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.4.0...v0.5.0)
