@@ -1,6 +1,6 @@
 {
   "name": "schools-sdk",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "The official TypeScript library for the Schools API",
   "author": "Schools <info@yufugumi.com>",
   "types": "dist/index.d.ts",
