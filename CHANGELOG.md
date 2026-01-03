@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.0 (2025-12-19)
+
+Full Changelog: [v0.5.1...v0.6.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.5.1...v0.6.0)
+
+### ⚠ BREAKING CHANGES
+
+* **mcp:** remove deprecated tool schemes
+* **mcp:** **Migration:** To migrate, simply modify the command used to invoke the MCP server. Currently, the only supported tool scheme is code mode. Now, starting the server with just `node /path/to/mcp/server` or `npx package-name` will invoke code tools: changing your command to one of these is likely all you will need to do.
+
+### Chores
+
+* **mcp:** remove deprecated tool schemes ([0a562e5](https://github.com/et0and/schools-sdk-typescript/commit/0a562e5e95284f49f0883a34d1e09c5858d710aa))
+
 ## 0.5.1 (2025-12-18)
 
 Full Changelog: [v0.5.0...v0.5.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.5.0...v0.5.1)
