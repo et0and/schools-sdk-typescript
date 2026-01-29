@@ -1,5 +1,41 @@
 # Changelog
 
+## 0.6.1 (2026-01-29)
+
+Full Changelog: [v0.6.0...v0.6.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.6.0...v0.6.1)
+
+### Bug Fixes
+
+* **docs:** fix mcp installation instructions for remote servers ([c16560b](https://github.com/et0and/schools-sdk-typescript/commit/c16560b5b736188766245cda3253d10c72c1e1ea))
+* **mcp:** allow falling back for required env variables ([0ef7111](https://github.com/et0and/schools-sdk-typescript/commit/0ef711141b61da9f3e8f53b7f5631e0488418a27))
+* **mcp:** correct code tool api output types ([2ace6d0](https://github.com/et0and/schools-sdk-typescript/commit/2ace6d0f9f2ac4123ffdc5c7d3237a3041592ec5))
+* **mcp:** fix options parsing ([86daf72](https://github.com/et0and/schools-sdk-typescript/commit/86daf7217ead96567fde5c38129be0c57978820f))
+* **mcp:** update code tool prompt ([f2bb3cb](https://github.com/et0and/schools-sdk-typescript/commit/f2bb3cbccea5318ab4f86d05f6f3b40918a9c29c))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([e775a1d](https://github.com/et0and/schools-sdk-typescript/commit/e775a1db6f874fb843be8a9e0ef70da3033349db))
+* **ci:** upgrade `actions/github-script` ([67f241d](https://github.com/et0and/schools-sdk-typescript/commit/67f241d5df92519f6e68fe28aae324e7c61a6e51))
+* **internal:** codegen related update ([10fce0c](https://github.com/et0and/schools-sdk-typescript/commit/10fce0c02b1f2e0e2bbab1108a8dfecf7c4e6b0b))
+* **internal:** codegen related update ([4d303a2](https://github.com/et0and/schools-sdk-typescript/commit/4d303a2890b135b0c3d00cc0f7b0856238d68c85))
+* **internal:** codegen related update ([8755503](https://github.com/et0and/schools-sdk-typescript/commit/8755503c9b769f62796529d2d6b837e9b44c1a7d))
+* **internal:** codegen related update ([c4ab054](https://github.com/et0and/schools-sdk-typescript/commit/c4ab054359789a66b375b7236d07d627cb041977))
+* **internal:** codegen related update ([75f5fef](https://github.com/et0and/schools-sdk-typescript/commit/75f5fef2aad0621cbef90241734bbb2fa97a1a5c))
+* **internal:** fix dockerfile ([6dc5132](https://github.com/et0and/schools-sdk-typescript/commit/6dc5132e3d0cc3375e489c805df30264490808ab))
+* **internal:** update `actions/checkout` version ([e73967e](https://github.com/et0and/schools-sdk-typescript/commit/e73967e333bb5b8a19301bd5c518c9af4914fda0))
+* **internal:** update lock file ([ff2e148](https://github.com/et0and/schools-sdk-typescript/commit/ff2e14870594c21bea7789f45bad44248262908e))
+* **internal:** upgrade babel, qs, js-yaml ([cb00ba5](https://github.com/et0and/schools-sdk-typescript/commit/cb00ba59d167f6c39e4acdbf56e5f4a0046f6d1b))
+* **mcp:** add intent param to execute tool ([c973362](https://github.com/et0and/schools-sdk-typescript/commit/c973362d2927feda4a25cd4a2b0370ef82c3eebe))
+* **mcp:** pass intent param to execute handler ([48e4d95](https://github.com/et0and/schools-sdk-typescript/commit/48e4d95f67e8212766cc0274661e908a4bac9914))
+* **mcp:** up tsconfig lib version to es2022 ([c32c8e4](https://github.com/et0and/schools-sdk-typescript/commit/c32c8e4ab1b9811375a4a42e28eb51ae611ec471))
+* **mcp:** upgrade dependencies ([25a174f](https://github.com/et0and/schools-sdk-typescript/commit/25a174f2e0db95c843b6b005e100bf015cd84170))
+
+
+### Documentation
+
+* prominently feature MCP server setup in root SDK readmes ([754be4d](https://github.com/et0and/schools-sdk-typescript/commit/754be4dccb2bbb30bd6c6c37c7c11b7990ccec02))
+
 ## 0.6.0 (2025-12-19)
 
 Full Changelog: [v0.5.1...v0.6.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.5.1...v0.6.0)
