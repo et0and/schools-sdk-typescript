@@ -146,6 +146,10 @@ describe('resource schools', () => {
 
   // Prism tests are disabled
   test.skip('search: required and optional params', async () => {
-    const response = await client.schools.search({ q: 'x', limit: 1, page: 1 });
+    const response = await client.schools.search({
+      q: 'x',
+      limit: 1,
+      page: 1,
+    });
   });
 });
