@@ -72,7 +72,10 @@ export function codeTool(): McpTool {
         'Content-Type': 'application/json',
         client_envs: JSON.stringify({
           SCHOOLS_API_KEY: readEnv('SCHOOLS_API_KEY') ?? client.apiKey ?? undefined,
-          SCHOOLS_BASE_URL: readEnv('SCHOOLS_BASE_URL') ?? client.baseURL ?? undefined,
+          SCHOOLS_BASE_URL:
+            readEnv('SCHOOLS_BASE_URL') ?? readEnv('SCHOOLS_ENVIRONMENT') ?
+              undefined
+            : client.baseURL ?? undefined,
         }),
       },
       body: JSON.stringify({
