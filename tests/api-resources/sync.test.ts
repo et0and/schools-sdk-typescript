@@ -8,7 +8,7 @@ const client = new Schools({
 });
 
 describe('resource sync', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getStatus', async () => {
     const responsePromise = client.sync.getStatus();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('trigger', async () => {
     const responsePromise = client.sync.trigger();
     const rawResponse = await responsePromise.asResponse();
