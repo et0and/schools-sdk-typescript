@@ -8,7 +8,7 @@ const client = new Schools({
 });
 
 describe('resource schools', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.schools.retrieve('schoolId');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.schools.list();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -52,7 +52,7 @@ describe('resource schools', () => {
     ).rejects.toThrow(Schools.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byAuthority', async () => {
     const responsePromise = client.schools.byAuthority('authority');
     const rawResponse = await responsePromise.asResponse();
@@ -64,7 +64,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byAuthority: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -72,7 +72,7 @@ describe('resource schools', () => {
     ).rejects.toThrow(Schools.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byCity', async () => {
     const responsePromise = client.schools.byCity('city');
     const rawResponse = await responsePromise.asResponse();
@@ -84,7 +84,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byCity: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -92,7 +92,7 @@ describe('resource schools', () => {
     ).rejects.toThrow(Schools.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byStatus', async () => {
     const responsePromise = client.schools.byStatus('status');
     const rawResponse = await responsePromise.asResponse();
@@ -104,7 +104,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('byStatus: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -112,7 +112,7 @@ describe('resource schools', () => {
     ).rejects.toThrow(Schools.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bySuburb', async () => {
     const responsePromise = client.schools.bySuburb('suburb');
     const rawResponse = await responsePromise.asResponse();
@@ -124,7 +124,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('bySuburb: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -132,7 +132,7 @@ describe('resource schools', () => {
     ).rejects.toThrow(Schools.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('search: only required params', async () => {
     const responsePromise = client.schools.search({ q: 'x' });
     const rawResponse = await responsePromise.asResponse();
@@ -144,7 +144,7 @@ describe('resource schools', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('search: required and optional params', async () => {
     const response = await client.schools.search({
       q: 'x',

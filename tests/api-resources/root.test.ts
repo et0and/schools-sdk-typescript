@@ -8,7 +8,7 @@ const client = new Schools({
 });
 
 describe('resource root', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.root.retrieve();
     const rawResponse = await responsePromise.asResponse();
