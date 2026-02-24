@@ -60,7 +60,7 @@ $ yarn link schools-sdk
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global schools-sdk
+$ pnpm link --global schools-sdk
 ```
 
 ## Running tests
