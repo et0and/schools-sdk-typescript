@@ -1,5 +1,49 @@
 # Changelog
 
+## 0.7.0 (2026-02-27)
+
+Full Changelog: [v0.6.1...v0.7.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.6.1...v0.7.0)
+
+### Features
+
+* **mcp:** add an option to disable code tool ([e7b5f7d](https://github.com/et0and/schools-sdk-typescript/commit/e7b5f7dfd00bd9d2dcb0e678f78432109093e554))
+* **mcp:** add initial server instructions ([f4be8b9](https://github.com/et0and/schools-sdk-typescript/commit/f4be8b98038c940c2fa5f60c17902e7aa9b23150))
+
+
+### Bug Fixes
+
+* **client:** avoid memory leak with abort signals ([8e64f93](https://github.com/et0and/schools-sdk-typescript/commit/8e64f939b7d76239219f8ea6d5d9866e70d01ff8))
+* **client:** avoid removing abort listener too early ([4cf9425](https://github.com/et0and/schools-sdk-typescript/commit/4cf9425497aa169e7af3944522cdc69a3e5e15e3))
+* **docs/contributing:** correct pnpm link command ([910f9a9](https://github.com/et0and/schools-sdk-typescript/commit/910f9a9effb3d127bb53000f5d9e607fb5024daa))
+* **mcp:** do not fallback on baseUrl if environment env variable is set ([dcb372a](https://github.com/et0and/schools-sdk-typescript/commit/dcb372abaf4cd0f147a0ea77302f466ce4f34fdb))
+* **mcp:** initialize SDK lazily to avoid failing the connection on init errors ([6c239a6](https://github.com/et0and/schools-sdk-typescript/commit/6c239a6244dc628a8ca107c195113ed12e4caedd))
+* **mcp:** update prompt ([ada0f8e](https://github.com/et0and/schools-sdk-typescript/commit/ada0f8ec89d202896f19777be0f56f2aeba2d079))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([147b123](https://github.com/et0and/schools-sdk-typescript/commit/147b1235409064f43310b2646fb5d0b7e9f47ccd))
+* **client:** restructure abort controller binding ([4279a43](https://github.com/et0and/schools-sdk-typescript/commit/4279a430cc315e09991c8330404c7ec1918cb8b2))
+* **internal/client:** fix form-urlencoded requests ([023e0ca](https://github.com/et0and/schools-sdk-typescript/commit/023e0cab4b74e38a332a336bd99983d2b7a72014))
+* **internal:** add health check to MCP server when running in HTTP mode ([b0762f6](https://github.com/et0and/schools-sdk-typescript/commit/b0762f60bca47605f403407d4d459d1a2fce9b64))
+* **internal:** allow basic filtering of methods allowed for MCP code mode ([24a3c1f](https://github.com/et0and/schools-sdk-typescript/commit/24a3c1fbbb5fdd3a6808f9f54ad7410576b84421))
+* **internal:** allow setting x-stainless-api-key header on mcp server requests ([c1fccf3](https://github.com/et0and/schools-sdk-typescript/commit/c1fccf35d1845e28bea7c0fb579b4bded4d749bc))
+* **internal:** always generate MCP server dockerfiles and upgrade associated dependencies ([b3c594a](https://github.com/et0and/schools-sdk-typescript/commit/b3c594a07b5d85e85d0a243815769e6a07840459))
+* **internal:** avoid type checking errors with ts-reset ([991df0a](https://github.com/et0and/schools-sdk-typescript/commit/991df0a33ac3481a6f7348a66671e9909806ba2b))
+* **internal:** cache fetch instruction calls in MCP server ([ae8c300](https://github.com/et0and/schools-sdk-typescript/commit/ae8c30003746b48315907a2aaff9ae0abbed4413))
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([b4237e5](https://github.com/et0and/schools-sdk-typescript/commit/b4237e5edd7a961f7bb21f44a6463b786755f86e))
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([9218ce7](https://github.com/et0and/schools-sdk-typescript/commit/9218ce7f5395fba4e7af42286a43197df97b06a8))
+* **internal:** improve layout of generated MCP server files ([4e0a792](https://github.com/et0and/schools-sdk-typescript/commit/4e0a792be5034d9e92d27d4966375bf460d43c99))
+* **internal:** make MCP code execution location configurable via a flag ([fd74d9c](https://github.com/et0and/schools-sdk-typescript/commit/fd74d9c4c64c86b2027a2aa1f6d4ea76de94191b))
+* **internal:** move stringifyQuery implementation to internal function ([944bd64](https://github.com/et0and/schools-sdk-typescript/commit/944bd642f066f0210598648d89f2cbabc5e05e64))
+* **internal:** refactor flag parsing for MCP servers and add debug flag ([a7d6f09](https://github.com/et0and/schools-sdk-typescript/commit/a7d6f09548714831ef5a881d938d5b87e65a34d8))
+* **internal:** remove mock server code ([38c907b](https://github.com/et0and/schools-sdk-typescript/commit/38c907b4e55a77cc72b4cb781d7f075e175366ce))
+* **internal:** support oauth authorization code flow for MCP servers ([ebd4f4a](https://github.com/et0and/schools-sdk-typescript/commit/ebd4f4aa4be43a4044c0f321a4b1d90beb526bd1))
+* **internal:** upgrade @modelcontextprotocol/sdk and hono ([eb24131](https://github.com/et0and/schools-sdk-typescript/commit/eb24131f1f7ef25ba6f9b90a01914068faf9185d))
+* **mcp:** correctly update version in sync with sdk ([1930954](https://github.com/et0and/schools-sdk-typescript/commit/1930954ee9ce38a5bf5223c57a75a2209dce3118))
+* **mcp:** forward STAINLESS_API_KEY to docs search endpoint ([b216143](https://github.com/et0and/schools-sdk-typescript/commit/b216143abac10aba134a6401597ebfeaa78c0fb4))
+* update mock server docs ([760cc2b](https://github.com/et0and/schools-sdk-typescript/commit/760cc2b35963f4cc6a19d82c0fe75f674c1cdb8a))
+
 ## 0.6.1 (2026-01-29)
 
 Full Changelog: [v0.6.0...v0.6.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.6.0...v0.6.1)
