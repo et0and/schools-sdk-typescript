@@ -761,9 +761,21 @@ export class Schools {
 
   static toFile = Uploads.toFile;
 
+  /**
+   * API health and status
+   */
   health: API.Health = new API.Health(this);
+  /**
+   * API health and status
+   */
   root: API.Root = new API.Root(this);
+  /**
+   * School data retrieval operations
+   */
   schools: API.SchoolsResource = new API.SchoolsResource(this);
+  /**
+   * Data sync operations
+   */
   sync: API.Sync = new API.Sync(this);
 }
 
