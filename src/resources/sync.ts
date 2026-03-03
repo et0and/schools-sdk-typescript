@@ -4,6 +4,9 @@ import { APIResource } from '../core/resource';
 import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 
+/**
+ * Data sync operations
+ */
 export class Sync extends APIResource {
   /**
    * Get sync status
