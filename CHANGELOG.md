@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.7.1 (2026-03-17)
+
+Full Changelog: [v0.7.0...v0.7.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.7.0...v0.7.1)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([038dec5](https://github.com/et0and/schools-sdk-typescript/commit/038dec52ed9c564418f7ac1dd1ab1e910527c80f))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([b1578e7](https://github.com/et0and/schools-sdk-typescript/commit/b1578e79f8ae86075e2d6c792fc32937d0a46e41))
+* **internal:** bump @modelcontextprotocol/sdk, @hono/node-server, and minimatch ([8c4772e](https://github.com/et0and/schools-sdk-typescript/commit/8c4772ee5098615d0c1895f132566ee34120b91b))
+* **internal:** codegen related update ([eacbfba](https://github.com/et0and/schools-sdk-typescript/commit/eacbfbac0fa967946605092df9ffc02f52c1d457))
+* **internal:** codegen related update ([560acd6](https://github.com/et0and/schools-sdk-typescript/commit/560acd6ed54ff42b364b52eb2b2abe5307180310))
+* **internal:** make generated MCP servers compatible with Cloudflare worker environments ([7106bd3](https://github.com/et0and/schools-sdk-typescript/commit/7106bd3a32491339236b2ec7dc66a27bd27d656f))
+* **internal:** support x-stainless-mcp-client-envs header in MCP servers ([8094ca1](https://github.com/et0and/schools-sdk-typescript/commit/8094ca1fb6ae501743cecb550e88bcb19639c937))
+* **internal:** support x-stainless-mcp-client-permissions headers in MCP servers ([0dd6123](https://github.com/et0and/schools-sdk-typescript/commit/0dd6123119e8555a382a0ed6ee1f3e2ce29f5a0a))
+* **internal:** tweak CI branches ([ed1ede4](https://github.com/et0and/schools-sdk-typescript/commit/ed1ede4ee658a2c8a50938edd28480894c0a729c))
+* **internal:** update dependencies to address dependabot vulnerabilities ([67eca46](https://github.com/et0and/schools-sdk-typescript/commit/67eca46bda86fff137e5b6a667dc14cd6e514e6e))
+* **internal:** use x-stainless-mcp-client-envs header for MCP remote code tool calls ([6cf5115](https://github.com/et0and/schools-sdk-typescript/commit/6cf511590f91b402f15cfa85b588b9f6e71d9162))
+* **mcp-server:** improve instructions ([0d521d2](https://github.com/et0and/schools-sdk-typescript/commit/0d521d2cacdd065b3e7e728db0626b9f791e93ff))
+* **mcp-server:** return access instructions for 404 without API key ([1696466](https://github.com/et0and/schools-sdk-typescript/commit/1696466446747a4263032ff2256e37f4c1dce6f0))
+
 ## 0.7.0 (2026-02-27)
 
 Full Changelog: [v0.6.1...v0.7.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.6.1...v0.7.0)
