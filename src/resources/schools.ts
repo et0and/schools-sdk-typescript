@@ -6,6 +6,9 @@ import { buildHeaders } from '../internal/headers';
 import { RequestOptions } from '../internal/request-options';
 import { path } from '../internal/utils/path';
 
+/**
+ * School data retrieval operations
+ */
 export class SchoolsResource extends APIResource {
   /**
    * Get school by School ID
