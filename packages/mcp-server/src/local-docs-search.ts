@@ -74,6 +74,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       http: {
         example: 'curl https://schools.tom.so/health \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'health->check',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->health->check();\n\nvar_dump($response);",
+      },
       python: {
         method: 'health.check',
         example:
@@ -109,6 +114,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example: 'curl https://schools.tom.so/ \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
+      },
+      php: {
+        method: 'root->retrieve',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$root = $client->root->retrieve();\n\nvar_dump($root);",
       },
       python: {
         method: 'root.retrieve',
@@ -157,6 +167,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       http: {
         example: 'curl https://schools.tom.so/v1/schools \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'schools->list',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$schools = $client->schools->list(\n  authority: 'authority',\n  city: 'city',\n  limit: 1,\n  name: 'name',\n  orgType: 'org_type',\n  page: 1,\n  status: 'status',\n  suburb: 'suburb',\n);\n\nvar_dump($schools);",
+      },
       python: {
         method: 'schools.list',
         example:
@@ -196,6 +211,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'curl https://schools.tom.so/v1/schools/search \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'schools->search',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->schools->search(q: 'x', limit: 1, page: 1);\n\nvar_dump($response);",
+      },
       python: {
         method: 'schools.search',
         example:
@@ -234,6 +254,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'curl https://schools.tom.so/v1/schools/id/$SCHOOL_ID \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'schools->retrieve',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$school = $client->schools->retrieve('schoolId');\n\nvar_dump($school);",
+      },
       python: {
         method: 'schools.retrieve',
         example:
@@ -270,6 +295,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       http: {
         example:
           'curl https://schools.tom.so/v1/schools/city/$CITY \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
+      },
+      php: {
+        method: 'schools->byCity',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byCity('city', limit: 1, page: 1);\n\nvar_dump($result);",
       },
       python: {
         method: 'schools.by_city',
@@ -308,6 +338,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'curl https://schools.tom.so/v1/schools/suburb/$SUBURB \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'schools->bySuburb',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->bySuburb('suburb', limit: 1, page: 1);\n\nvar_dump($result);",
+      },
       python: {
         method: 'schools.by_suburb',
         example:
@@ -344,6 +379,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       http: {
         example:
           'curl https://schools.tom.so/v1/schools/authority/$AUTHORITY \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
+      },
+      php: {
+        method: 'schools->byAuthority',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byAuthority('authority', limit: 1, page: 1);\n\nvar_dump($result);",
       },
       python: {
         method: 'schools.by_authority',
@@ -382,6 +422,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'curl https://schools.tom.so/v1/schools/status/$STATUS \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'schools->byStatus',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byStatus('status', limit: 1, page: 1);\n\nvar_dump($result);",
+      },
       python: {
         method: 'schools.by_status',
         example:
@@ -418,6 +463,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       http: {
         example:
           'curl https://schools.tom.so/v1/sync \\\n    -X POST \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
+      },
+      php: {
+        method: 'sync->trigger',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->sync->trigger();\n\nvar_dump($response);",
       },
       python: {
         method: 'sync.trigger',
@@ -456,6 +506,11 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'curl https://schools.tom.so/v1/sync/status \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
+      php: {
+        method: 'sync->getStatus',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->sync->getStatus();\n\nvar_dump($response);",
+      },
       python: {
         method: 'sync.get_status',
         example:
@@ -490,6 +545,11 @@ const EMBEDDED_READMES: { language: string; content: string }[] = [
     language: 'cli',
     content:
       "# Schools CLI\n\nThe official CLI for the [Schools REST API](https://schools.tom.so).\n\nIt is generated with [Stainless](https://www.stainless.com/).\n\n<!-- x-release-please-start-version -->\n\n## Installation\n\n### Installing with Go\n\nTo test or install the CLI locally, you need [Go](https://go.dev/doc/install) version 1.22 or later installed.\n\n~~~sh\ngo install 'github.com/et0and/schools-cli/cmd/schools@latest'\n~~~\n\nOnce you have run `go install`, the binary is placed in your Go bin directory:\n\n- **Default location**: `$HOME/go/bin` (or `$GOPATH/bin` if GOPATH is set)\n- **Check your path**: Run `go env GOPATH` to see the base directory\n\nIf commands aren't found after installation, add the Go bin directory to your PATH:\n\n~~~sh\n# Add to your shell profile (.zshrc, .bashrc, etc.)\nexport PATH=\"$PATH:$(go env GOPATH)/bin\"\n~~~\n\n<!-- x-release-please-end -->\n\n### Running Locally\n\nAfter cloning the git repository for this project, you can use the\n`scripts/run` script to run the tool locally:\n\n~~~sh\n./scripts/run args...\n~~~\n\n## Usage\n\nThe CLI follows a resource-based command structure:\n\n~~~sh\nschools [resource] <command> [flags...]\n~~~\n\n~~~sh\nschools health check \\\n  --api-key 'My API Key'\n~~~\n\nFor details about specific commands, use the `--help` flag.\n\n### Environment variables\n\n| Environment variable | Required | Default value |\n| -------------------- | -------- | ------------- |\n| `SCHOOLS_API_KEY`    | no       | `null`        |\n\n### Global flags\n\n- `--api-key` (can also be set with `SCHOOLS_API_KEY` env var)\n- `--help` - Show command line usage\n- `--debug` - Enable debug logging (includes HTTP request/response details)\n- `--version`, `-v` - Show the CLI version\n- `--base-url` - Use a custom API backend URL\n- `--format` - Change the output format (`auto`, `explore`, `json`, `jsonl`, `pretty`, `raw`, `yaml`)\n- `--format-error` - Change the output format for errors (`auto`, `explore`, `json`, `jsonl`, `pretty`, `raw`, `yaml`)\n- `--transform` - Transform the data output using [GJSON syntax](https://github.com/tidwall/gjson/blob/master/SYNTAX.md)\n- `--transform-error` - Transform the error output using [GJSON syntax](https://github.com/tidwall/gjson/blob/master/SYNTAX.md)\n\n### Passing files as arguments\n\nTo pass files to your API, you can use the `@myfile.ext` syntax:\n\n~~~bash\nschools <command> --arg @abe.jpg\n~~~\n\nFiles can also be passed inside JSON or YAML blobs:\n\n~~~bash\nschools <command> --arg '{image: \"@abe.jpg\"}'\n# Equivalent:\nschools <command> <<YAML\narg:\n  image: \"@abe.jpg\"\nYAML\n~~~\n\nIf you need to pass a string literal that begins with an `@` sign, you can\nescape the `@` sign to avoid accidentally passing a file.\n\n~~~bash\nschools <command> --username '\\@abe'\n~~~\n\n#### Explicit encoding\n\nFor JSON endpoints, the CLI tool does filetype sniffing to determine whether the\nfile contents should be sent as a string literal (for plain text files) or as a\nbase64-encoded string literal (for binary files). If you need to explicitly send\nthe file as either plain text or base64-encoded data, you can use\n`@file://myfile.txt` (for string encoding) or `@data://myfile.dat` (for\nbase64-encoding). Note that absolute paths will begin with `@file://` or\n`@data://`, followed by a third `/` (for example, `@file:///tmp/file.txt`).\n\n~~~bash\nschools <command> --arg @data://file.txt\n~~~\n",
+  },
+  {
+    language: 'php',
+    content:
+      '# Schools PHP API Library\n\nThe Schools PHP library provides convenient access to the Schools REST API from any PHP 8.1.0+ application.\n\n## Installation\n\nTo use this package, install via Composer by adding the following to your application\'s `composer.json`:\n\n<!-- x-release-please-start-version -->\n```json\n{\n  "repositories": [\n    {\n      "type": "vcs",\n      "url": "git@github.com:et0and/schools-sdk-php.git"\n    }\n  ],\n  "require": {\n    "org-placeholder/schools": "dev-main"\n  }\n}\n```\n<!-- x-release-please-end -->\n\n## Usage\n\n```php\n<?php\n\n$client = new Client(\n  apiKey: getenv(\'SCHOOLS_API_KEY\') ?: \'My API Key\',\n  environment: \'environment_1\',\n);\n\n$response = $client->health->check();\n\nvar_dump($response->status);\n```',
   },
 ];
 
