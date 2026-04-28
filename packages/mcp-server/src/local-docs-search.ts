@@ -62,32 +62,32 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## check\n\n`client.health.check(): { status?: string; timestamp?: string; }`\n\n**get** `/health`\n\nAPI health check\n\n### Returns\n\n- `{ status?: string; timestamp?: string; }`\n\n  - `status?: string`\n  - `timestamp?: string`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst response = await client.health.check();\n\nconsole.log(response);\n```",
     perLanguage: {
-      cli: {
-        method: 'health check',
-        example: "schools health check \\\n  --api-key 'My API Key'",
-      },
-      go: {
-        method: 'client.Health.Check',
+      typescript: {
+        method: 'client.health.check',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Health.Check(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Status)\n}\n',
-      },
-      http: {
-        example: 'curl https://schools.tom.so/health \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'health->check',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->health->check();\n\nvar_dump($response);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.health.check();\n\nconsole.log(response.status);",
       },
       python: {
         method: 'health.check',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.health.check()\nprint(response.status)',
       },
-      typescript: {
-        method: 'client.health.check',
+      go: {
+        method: 'client.Health.Check',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.health.check();\n\nconsole.log(response.status);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Health.Check(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Status)\n}\n',
+      },
+      cli: {
+        method: 'health check',
+        example: "schools health check \\\n  --api-key 'My API Key'",
+      },
+      php: {
+        method: 'health->check',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->health->check();\n\nvar_dump($response);",
+      },
+      http: {
+        example: 'curl https://schools.tom.so/health \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -103,32 +103,32 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.root.retrieve(): { docs?: string; endpoints?: object; message?: string; version?: string; }`\n\n**get** `/`\n\nAPI root information\n\n### Returns\n\n- `{ docs?: string; endpoints?: object; message?: string; version?: string; }`\n\n  - `docs?: string`\n  - `endpoints?: object`\n  - `message?: string`\n  - `version?: string`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst root = await client.root.retrieve();\n\nconsole.log(root);\n```",
     perLanguage: {
-      cli: {
-        method: 'root retrieve',
-        example: "schools root retrieve \\\n  --api-key 'My API Key'",
-      },
-      go: {
-        method: 'client.Root.Get',
+      typescript: {
+        method: 'client.root.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\troot, err := client.Root.Get(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", root.Docs)\n}\n',
-      },
-      http: {
-        example: 'curl https://schools.tom.so/ \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'root->retrieve',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$root = $client->root->retrieve();\n\nvar_dump($root);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst root = await client.root.retrieve();\n\nconsole.log(root.docs);",
       },
       python: {
         method: 'root.retrieve',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nroot = client.root.retrieve()\nprint(root.docs)',
       },
-      typescript: {
-        method: 'client.root.retrieve',
+      go: {
+        method: 'client.Root.Get',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst root = await client.root.retrieve();\n\nconsole.log(root.docs);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\troot, err := client.Root.Get(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", root.Docs)\n}\n',
+      },
+      cli: {
+        method: 'root retrieve',
+        example: "schools root retrieve \\\n  --api-key 'My API Key'",
+      },
+      php: {
+        method: 'root->retrieve',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$root = $client->root->retrieve();\n\nvar_dump($root);",
+      },
+      http: {
+        example: 'curl https://schools.tom.so/ \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -155,32 +155,32 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.schools.list(authority?: string, city?: string, limit?: number, name?: string, org_type?: string, page?: number, status?: string, suburb?: string): { data?: object[]; pagination?: object; }`\n\n**get** `/v1/schools`\n\nGet all schools with filtering\n\n### Parameters\n\n- `authority?: string`\n  Filter by education authority\n\n- `city?: string`\n  Filter by city (partial match)\n\n- `limit?: number`\n  Results per page (default: 20, max: 100)\n\n- `name?: string`\n  Filter by school name (partial match)\n\n- `org_type?: string`\n  Filter by organization type\n\n- `page?: number`\n  Page number (default: 1)\n\n- `status?: string`\n  Filter by school status\n\n- `suburb?: string`\n  Filter by suburb (partial match)\n\n### Returns\n\n- `{ data?: object[]; pagination?: { limit?: number; page?: number; total?: number; totalPages?: number; }; }`\n\n  - `data?: object[]`\n  - `pagination?: { limit?: number; page?: number; total?: number; totalPages?: number; }`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst schools = await client.schools.list();\n\nconsole.log(schools);\n```",
     perLanguage: {
-      cli: {
-        method: 'schools list',
-        example: "schools schools list \\\n  --api-key 'My API Key'",
-      },
-      go: {
-        method: 'client.Schools.List',
+      typescript: {
+        method: 'client.schools.list',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tschools, err := client.Schools.List(context.TODO(), schools.SchoolListParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", schools.Data)\n}\n',
-      },
-      http: {
-        example: 'curl https://schools.tom.so/v1/schools \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->list',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$schools = $client->schools->list(\n  authority: 'authority',\n  city: 'city',\n  limit: 1,\n  name: 'name',\n  orgType: 'org_type',\n  page: 1,\n  status: 'status',\n  suburb: 'suburb',\n);\n\nvar_dump($schools);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst schools = await client.schools.list();\n\nconsole.log(schools.data);",
       },
       python: {
         method: 'schools.list',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nschools = client.schools.list()\nprint(schools.data)',
       },
-      typescript: {
-        method: 'client.schools.list',
+      go: {
+        method: 'client.Schools.List',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst schools = await client.schools.list();\n\nconsole.log(schools.data);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tschools, err := client.Schools.List(context.TODO(), schools.SchoolListParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", schools.Data)\n}\n',
+      },
+      cli: {
+        method: 'schools list',
+        example: "schools schools list \\\n  --api-key 'My API Key'",
+      },
+      php: {
+        method: 'schools->list',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$schools = $client->schools->list(\n  authority: 'authority',\n  city: 'city',\n  limit: 1,\n  name: 'name',\n  orgType: 'org_type',\n  page: 1,\n  status: 'status',\n  suburb: 'suburb',\n);\n\nvar_dump($schools);",
+      },
+      http: {
+        example: 'curl https://schools.tom.so/v1/schools \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -198,33 +198,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## search\n\n`client.schools.search(q: string, limit?: number, page?: number): { data?: object[]; pagination?: object; }`\n\n**get** `/v1/schools/search`\n\nFull-text search schools by name\n\n### Parameters\n\n- `q: string`\n  Search query\n\n- `limit?: number`\n  Results per page (default: 20, max: 100)\n\n- `page?: number`\n  Page number (default: 1)\n\n### Returns\n\n- `{ data?: object[]; pagination?: { limit?: number; page?: number; total?: number; totalPages?: number; }; }`\n\n  - `data?: object[]`\n  - `pagination?: { limit?: number; page?: number; total?: number; totalPages?: number; }`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst response = await client.schools.search({ q: 'x' });\n\nconsole.log(response);\n```",
     perLanguage: {
-      cli: {
-        method: 'schools search',
-        example: "schools schools search \\\n  --api-key 'My API Key' \\\n  --q x",
-      },
-      go: {
-        method: 'client.Schools.Search',
+      typescript: {
+        method: 'client.schools.search',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Schools.Search(context.TODO(), schools.SchoolSearchParams{\n\t\tQ: "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Data)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/schools/search \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->search',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->schools->search(q: 'x', limit: 1, page: 1);\n\nvar_dump($response);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.schools.search({ q: 'x' });\n\nconsole.log(response.data);",
       },
       python: {
         method: 'schools.search',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.schools.search(\n    q="x",\n)\nprint(response.data)',
       },
-      typescript: {
-        method: 'client.schools.search',
+      go: {
+        method: 'client.Schools.Search',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.schools.search({ q: 'x' });\n\nconsole.log(response.data);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Schools.Search(context.TODO(), schools.SchoolSearchParams{\n\t\tQ: "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Data)\n}\n',
+      },
+      cli: {
+        method: 'schools search',
+        example: "schools schools search \\\n  --api-key 'My API Key' \\\n  --q x",
+      },
+      php: {
+        method: 'schools->search',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->schools->search(q: 'x', limit: 1, page: 1);\n\nvar_dump($response);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/schools/search \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -241,33 +241,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.schools.retrieve(schoolId: string): { data?: object; }`\n\n**get** `/v1/schools/id/{schoolId}`\n\nGet school by School ID\n\n### Parameters\n\n- `schoolId: string`\n\n### Returns\n\n- `{ data?: object; }`\n\n  - `data?: object`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst school = await client.schools.retrieve('schoolId');\n\nconsole.log(school);\n```",
     perLanguage: {
-      cli: {
-        method: 'schools retrieve',
-        example: "schools schools retrieve \\\n  --api-key 'My API Key' \\\n  --school-id schoolId",
-      },
-      go: {
-        method: 'client.Schools.Get',
+      typescript: {
+        method: 'client.schools.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tschool, err := client.Schools.Get(context.TODO(), "schoolId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", school.Data)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/schools/id/$SCHOOL_ID \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->retrieve',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$school = $client->schools->retrieve('schoolId');\n\nvar_dump($school);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst school = await client.schools.retrieve('schoolId');\n\nconsole.log(school.data);",
       },
       python: {
         method: 'schools.retrieve',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nschool = client.schools.retrieve(\n    "schoolId",\n)\nprint(school.data)',
       },
-      typescript: {
-        method: 'client.schools.retrieve',
+      go: {
+        method: 'client.Schools.Get',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst school = await client.schools.retrieve('schoolId');\n\nconsole.log(school.data);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tschool, err := client.Schools.Get(context.TODO(), "schoolId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", school.Data)\n}\n',
+      },
+      cli: {
+        method: 'schools retrieve',
+        example: "schools schools retrieve \\\n  --api-key 'My API Key' \\\n  --school-id schoolId",
+      },
+      php: {
+        method: 'schools->retrieve',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$school = $client->schools->retrieve('schoolId');\n\nvar_dump($school);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/schools/id/$SCHOOL_ID \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -283,33 +283,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## by_city\n\n`client.schools.byCity(city: string, limit?: number, page?: number): void`\n\n**get** `/v1/schools/city/{city}`\n\nGet schools by city\n\n### Parameters\n\n- `city: string`\n\n- `limit?: number`\n\n- `page?: number`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nawait client.schools.byCity('city')\n```",
     perLanguage: {
-      cli: {
-        method: 'schools by_city',
-        example: "schools schools by-city \\\n  --api-key 'My API Key' \\\n  --city city",
-      },
-      go: {
-        method: 'client.Schools.ByCity',
+      typescript: {
+        method: 'client.schools.byCity',
         example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.ByCity(\n\t\tcontext.TODO(),\n\t\t"city",\n\t\tschools.SchoolByCityParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/schools/city/$CITY \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->byCity',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byCity('city', limit: 1, page: 1);\n\nvar_dump($result);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.byCity('city');",
       },
       python: {
         method: 'schools.by_city',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nclient.schools.by_city(\n    city="city",\n)',
       },
-      typescript: {
-        method: 'client.schools.byCity',
+      go: {
+        method: 'client.Schools.ByCity',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.byCity('city');",
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.ByCity(\n\t\tcontext.TODO(),\n\t\t"city",\n\t\tschools.SchoolByCityParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+      },
+      cli: {
+        method: 'schools by_city',
+        example: "schools schools by-city \\\n  --api-key 'My API Key' \\\n  --city city",
+      },
+      php: {
+        method: 'schools->byCity',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byCity('city', limit: 1, page: 1);\n\nvar_dump($result);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/schools/city/$CITY \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -325,33 +325,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## by_suburb\n\n`client.schools.bySuburb(suburb: string, limit?: number, page?: number): void`\n\n**get** `/v1/schools/suburb/{suburb}`\n\nGet schools by suburb\n\n### Parameters\n\n- `suburb: string`\n\n- `limit?: number`\n\n- `page?: number`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nawait client.schools.bySuburb('suburb')\n```",
     perLanguage: {
-      cli: {
-        method: 'schools by_suburb',
-        example: "schools schools by-suburb \\\n  --api-key 'My API Key' \\\n  --suburb suburb",
-      },
-      go: {
-        method: 'client.Schools.BySuburb',
+      typescript: {
+        method: 'client.schools.bySuburb',
         example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.BySuburb(\n\t\tcontext.TODO(),\n\t\t"suburb",\n\t\tschools.SchoolBySuburbParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/schools/suburb/$SUBURB \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->bySuburb',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->bySuburb('suburb', limit: 1, page: 1);\n\nvar_dump($result);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.bySuburb('suburb');",
       },
       python: {
         method: 'schools.by_suburb',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nclient.schools.by_suburb(\n    suburb="suburb",\n)',
       },
-      typescript: {
-        method: 'client.schools.bySuburb',
+      go: {
+        method: 'client.Schools.BySuburb',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.bySuburb('suburb');",
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.BySuburb(\n\t\tcontext.TODO(),\n\t\t"suburb",\n\t\tschools.SchoolBySuburbParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+      },
+      cli: {
+        method: 'schools by_suburb',
+        example: "schools schools by-suburb \\\n  --api-key 'My API Key' \\\n  --suburb suburb",
+      },
+      php: {
+        method: 'schools->bySuburb',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->bySuburb('suburb', limit: 1, page: 1);\n\nvar_dump($result);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/schools/suburb/$SUBURB \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -367,33 +367,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## by_authority\n\n`client.schools.byAuthority(authority: string, limit?: number, page?: number): void`\n\n**get** `/v1/schools/authority/{authority}`\n\nGet schools by authority\n\n### Parameters\n\n- `authority: string`\n\n- `limit?: number`\n\n- `page?: number`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nawait client.schools.byAuthority('authority')\n```",
     perLanguage: {
-      cli: {
-        method: 'schools by_authority',
-        example: "schools schools by-authority \\\n  --api-key 'My API Key' \\\n  --authority authority",
-      },
-      go: {
-        method: 'client.Schools.ByAuthority',
+      typescript: {
+        method: 'client.schools.byAuthority',
         example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.ByAuthority(\n\t\tcontext.TODO(),\n\t\t"authority",\n\t\tschools.SchoolByAuthorityParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/schools/authority/$AUTHORITY \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->byAuthority',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byAuthority('authority', limit: 1, page: 1);\n\nvar_dump($result);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.byAuthority('authority');",
       },
       python: {
         method: 'schools.by_authority',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nclient.schools.by_authority(\n    authority="authority",\n)',
       },
-      typescript: {
-        method: 'client.schools.byAuthority',
+      go: {
+        method: 'client.Schools.ByAuthority',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.byAuthority('authority');",
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.ByAuthority(\n\t\tcontext.TODO(),\n\t\t"authority",\n\t\tschools.SchoolByAuthorityParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+      },
+      cli: {
+        method: 'schools by_authority',
+        example: "schools schools by-authority \\\n  --api-key 'My API Key' \\\n  --authority authority",
+      },
+      php: {
+        method: 'schools->byAuthority',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byAuthority('authority', limit: 1, page: 1);\n\nvar_dump($result);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/schools/authority/$AUTHORITY \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -409,33 +409,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## by_status\n\n`client.schools.byStatus(status: string, limit?: number, page?: number): void`\n\n**get** `/v1/schools/status/{status}`\n\nGet schools by status\n\n### Parameters\n\n- `status: string`\n\n- `limit?: number`\n\n- `page?: number`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nawait client.schools.byStatus('status')\n```",
     perLanguage: {
-      cli: {
-        method: 'schools by_status',
-        example: "schools schools by-status \\\n  --api-key 'My API Key' \\\n  --status status",
-      },
-      go: {
-        method: 'client.Schools.ByStatus',
+      typescript: {
+        method: 'client.schools.byStatus',
         example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.ByStatus(\n\t\tcontext.TODO(),\n\t\t"status",\n\t\tschools.SchoolByStatusParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/schools/status/$STATUS \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'schools->byStatus',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byStatus('status', limit: 1, page: 1);\n\nvar_dump($result);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.byStatus('status');",
       },
       python: {
         method: 'schools.by_status',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nclient.schools.by_status(\n    status="status",\n)',
       },
-      typescript: {
-        method: 'client.schools.byStatus',
+      go: {
+        method: 'client.Schools.ByStatus',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schools.byStatus('status');",
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Schools.ByStatus(\n\t\tcontext.TODO(),\n\t\t"status",\n\t\tschools.SchoolByStatusParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+      },
+      cli: {
+        method: 'schools by_status',
+        example: "schools schools by-status \\\n  --api-key 'My API Key' \\\n  --status status",
+      },
+      php: {
+        method: 'schools->byStatus',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$result = $client->schools->byStatus('status', limit: 1, page: 1);\n\nvar_dump($result);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/schools/status/$STATUS \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -451,33 +451,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## trigger\n\n`client.sync.trigger(): { error?: string; lastSync?: string; recordCount?: number; success?: boolean; }`\n\n**post** `/v1/sync`\n\nTrigger manual data sync\n\n### Returns\n\n- `{ error?: string; lastSync?: string; recordCount?: number; success?: boolean; }`\n\n  - `error?: string`\n  - `lastSync?: string`\n  - `recordCount?: number`\n  - `success?: boolean`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst response = await client.sync.trigger();\n\nconsole.log(response);\n```",
     perLanguage: {
-      cli: {
-        method: 'sync trigger',
-        example: "schools sync trigger \\\n  --api-key 'My API Key'",
-      },
-      go: {
-        method: 'client.Sync.Trigger',
+      typescript: {
+        method: 'client.sync.trigger',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Sync.Trigger(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Error)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/sync \\\n    -X POST \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'sync->trigger',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->sync->trigger();\n\nvar_dump($response);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.sync.trigger();\n\nconsole.log(response.error);",
       },
       python: {
         method: 'sync.trigger',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.sync.trigger()\nprint(response.error)',
       },
-      typescript: {
-        method: 'client.sync.trigger',
+      go: {
+        method: 'client.Sync.Trigger',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.sync.trigger();\n\nconsole.log(response.error);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Sync.Trigger(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Error)\n}\n',
+      },
+      cli: {
+        method: 'sync trigger',
+        example: "schools sync trigger \\\n  --api-key 'My API Key'",
+      },
+      php: {
+        method: 'sync->trigger',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->sync->trigger();\n\nvar_dump($response);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/sync \\\n    -X POST \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
@@ -493,33 +493,33 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## get_status\n\n`client.sync.getStatus(): { isStale?: boolean; lastSync?: string; recordCount?: number; }`\n\n**get** `/v1/sync/status`\n\nGet sync status\n\n### Returns\n\n- `{ isStale?: boolean; lastSync?: string; recordCount?: number; }`\n\n  - `isStale?: boolean`\n  - `lastSync?: string`\n  - `recordCount?: number`\n\n### Example\n\n```typescript\nimport Schools from 'schools-sdk';\n\nconst client = new Schools();\n\nconst response = await client.sync.getStatus();\n\nconsole.log(response);\n```",
     perLanguage: {
-      cli: {
-        method: 'sync get_status',
-        example: "schools sync get-status \\\n  --api-key 'My API Key'",
-      },
-      go: {
-        method: 'client.Sync.GetStatus',
+      typescript: {
+        method: 'client.sync.getStatus',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Sync.GetStatus(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.IsStale)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://schools.tom.so/v1/sync/status \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
-      },
-      php: {
-        method: 'sync->getStatus',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->sync->getStatus();\n\nvar_dump($response);",
+          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.sync.getStatus();\n\nconsole.log(response.isStale);",
       },
       python: {
         method: 'sync.get_status',
         example:
           'import os\nfrom schools import Schools\n\nclient = Schools(\n    api_key=os.environ.get("SCHOOLS_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.sync.get_status()\nprint(response.is_stale)',
       },
-      typescript: {
-        method: 'client.sync.getStatus',
+      go: {
+        method: 'client.Sync.GetStatus',
         example:
-          "import Schools from 'schools-sdk';\n\nconst client = new Schools({\n  apiKey: process.env['SCHOOLS_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.sync.getStatus();\n\nconsole.log(response.isStale);",
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/et0and/schools-sdk-go"\n\t"github.com/et0and/schools-sdk-go/option"\n)\n\nfunc main() {\n\tclient := schools.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Sync.GetStatus(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.IsStale)\n}\n',
+      },
+      cli: {
+        method: 'sync get_status',
+        example: "schools sync get-status \\\n  --api-key 'My API Key'",
+      },
+      php: {
+        method: 'sync->getStatus',
+        example:
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key', environment: 'environment_1');\n\n$response = $client->sync->getStatus();\n\nvar_dump($response);",
+      },
+      http: {
+        example:
+          'curl https://schools.tom.so/v1/sync/status \\\n    -H "Authorization: Bearer $SCHOOLS_API_KEY"',
       },
     },
   },
