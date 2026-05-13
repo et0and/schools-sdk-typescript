@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.8.0 (2026-05-13)
+
+Full Changelog: [v0.7.1...v0.8.0](https://github.com/et0and/schools-sdk-typescript/compare/v0.7.1...v0.8.0)
+
+### Features
+
+* support setting headers via env ([265deda](https://github.com/et0and/schools-sdk-typescript/commit/265deda504978aae92e32baaaa6cd6d0fd8d393b))
+
+
+### Chores
+
+* avoid formatting file that gets changed during releases ([74f7277](https://github.com/et0and/schools-sdk-typescript/commit/74f7277e52a076c9a6206d47b5139afaa621474e))
+* **ci:** escape input path in publish-npm workflow ([53f33e9](https://github.com/et0and/schools-sdk-typescript/commit/53f33e99e4e6fde790bb487d0dc7e2820f8acb10))
+* **ci:** skip lint on metadata-only changes ([8eb0faf](https://github.com/et0and/schools-sdk-typescript/commit/8eb0fafa3002c3094453a4806939ce878ab1b5a8))
+* **format:** run eslint and prettier separately ([28137ee](https://github.com/et0and/schools-sdk-typescript/commit/28137eee8651d9a6402ad5f78539fdb3aa6f29ab))
+* **internal:** codegen related update ([17f57c1](https://github.com/et0and/schools-sdk-typescript/commit/17f57c18fc8773e183a5fe72778f1ad63fe6d377))
+* **internal:** codegen related update ([943c8c7](https://github.com/et0and/schools-sdk-typescript/commit/943c8c72c89076b3df92a7d9741ace6da0373197))
+* **internal:** codegen related update ([fe38273](https://github.com/et0and/schools-sdk-typescript/commit/fe38273342770e5ebd249f253c8a3bfe2e817cdb))
+* **internal:** codegen related update ([71108f6](https://github.com/et0and/schools-sdk-typescript/commit/71108f642a0abc8f1065807fcbbd311e32076d26))
+* **internal:** codegen related update ([81a5f97](https://github.com/et0and/schools-sdk-typescript/commit/81a5f97f167261cd45d7458c6bb6a8209f51d33e))
+* **internal:** fix MCP docker image builds in yarn projects ([05860d9](https://github.com/et0and/schools-sdk-typescript/commit/05860d91144acd323a040fce15f2c23d5dfc600e))
+* **internal:** fix MCP server import ordering ([3227170](https://github.com/et0and/schools-sdk-typescript/commit/3227170c37350033083bad1b2086da89e9856c3a))
+* **internal:** fix MCP server TS errors that occur with required client options ([b168fcb](https://github.com/et0and/schools-sdk-typescript/commit/b168fcb19e05d12a600b57939c570ffded6ccfe3))
+* **internal:** improve local docs search for MCP servers ([4cf7952](https://github.com/et0and/schools-sdk-typescript/commit/4cf79527f6be2e4170f17ef26b2b6d64f4c2b8bc))
+* **internal:** improve local docs search for MCP servers ([4a0bf3d](https://github.com/et0and/schools-sdk-typescript/commit/4a0bf3dad8efd116e4eb0fd1194b269ef0f0c0f0))
+* **internal:** more robust bootstrap script ([112136d](https://github.com/et0and/schools-sdk-typescript/commit/112136d7fc8014eac1969e847bc9d4a7e3e98f00))
+* **internal:** show error causes in MCP servers when running in local mode ([64e5ff8](https://github.com/et0and/schools-sdk-typescript/commit/64e5ff8f862e0fd96f0d32308545ad671607062e))
+* **internal:** support custom-instructions-path flag in MCP servers ([234b238](https://github.com/et0and/schools-sdk-typescript/commit/234b238c6dc125e16b5d4e05ff3a1541eb545ae6))
+* **internal:** support local docs search in MCP servers ([20e80c1](https://github.com/et0and/schools-sdk-typescript/commit/20e80c1a0ab787a1bfc508ede4a5ccadddb1c40d))
+* **internal:** support type annotations when running MCP in local execution mode ([b0d3b73](https://github.com/et0and/schools-sdk-typescript/commit/b0d3b7316e06ad34bef64f82463d01c84faa3dbe))
+* **internal:** update docs ordering ([9609cdb](https://github.com/et0and/schools-sdk-typescript/commit/9609cdb87d00de5d68b0336dd2530ce0f2ba123c))
+* **internal:** update gitignore ([fbe53ba](https://github.com/et0and/schools-sdk-typescript/commit/fbe53ba514a1bb64c8d97f0ed064926020aada42))
+* **internal:** use link instead of file in MCP server package.json files ([4c0ca5c](https://github.com/et0and/schools-sdk-typescript/commit/4c0ca5cfb7c3b7b1fca291ab957c0763738dba4b))
+* **mcp-server:** add support for session id, forward client info ([aa45d64](https://github.com/et0and/schools-sdk-typescript/commit/aa45d64cdbf69368be5d30b81468a512c6edbd3d))
+* **mcp-server:** increase local docs search result count from 5 to 10 ([ac9ac7e](https://github.com/et0and/schools-sdk-typescript/commit/ac9ac7ecec610db296f18f343442bda14ec56a81))
+* **mcp-server:** log client info ([6a34962](https://github.com/et0and/schools-sdk-typescript/commit/6a34962e83775b9e96f8b27e86555c4c210a412d))
+* redact api-key headers in debug logs ([de084b1](https://github.com/et0and/schools-sdk-typescript/commit/de084b1db56d7d3cb237abcea6e494f3c63166de))
+* restructure docs search code ([2bc62f0](https://github.com/et0and/schools-sdk-typescript/commit/2bc62f029e5899d39f4f0e75873127f2544b0886))
+* update CLI documentation ([ad6d2ca](https://github.com/et0and/schools-sdk-typescript/commit/ad6d2cae85a8c83c64f187181c1744cc6e982e85))
+
 ## 0.7.1 (2026-03-17)
 
 Full Changelog: [v0.7.0...v0.7.1](https://github.com/et0and/schools-sdk-typescript/compare/v0.7.0...v0.7.1)

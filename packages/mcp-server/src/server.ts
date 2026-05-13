@@ -29,7 +29,7 @@ export const newMcpServer = async ({
   new McpServer(
     {
       name: 'schools_sdk_api',
-      version: '0.7.1',
+      version: '0.8.0',
     },
     {
       instructions: await getInstructions({ stainlessApiKey, customInstructionsPath }),
